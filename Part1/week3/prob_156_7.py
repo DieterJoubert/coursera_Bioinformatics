@@ -34,7 +34,7 @@ def InAll(dna, pattern, d):
       kmer = dna_string[i:i+len(pattern)]
       if HammingDistance(kmer, pattern) <= d:
         found = True
-        #break
+        break
     if found == False:
       return False
   return True
