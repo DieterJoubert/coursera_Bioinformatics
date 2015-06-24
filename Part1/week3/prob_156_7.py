@@ -8,8 +8,6 @@ def prob_156_7():
   for i in range(1,len(lines)):
     dna.append(lines[i])
 
-  print dna
-
   fout = open("out.txt", "w")
   fout.write(" ".join(MotifEnumeration(dna, k, d)))
   fout.close()
