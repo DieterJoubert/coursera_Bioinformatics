@@ -25,6 +25,5 @@ def OverlapGraph(kmers):
 
   return graph
 
-
 if __name__ == '__main__':
   prob_198_9()

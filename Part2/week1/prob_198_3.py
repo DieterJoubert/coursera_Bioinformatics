@@ -50,6 +50,5 @@ def OverlapString(kmers):
   print overlap_string
   return overlap_string
 
-
 if __name__ == '__main__':
   prob_198_3()
