@@ -1,30 +1,32 @@
 def prob_2_9():
   lines = open("dataset_2_9.txt").read().splitlines()
 
-  Text = lines[0]
+  text = lines[0]
   k = int(lines[1])
 
-  print(FrequentWords(Text,k))
+  fout = open("out.txt", "w")
+  fout.write(" ".join(frequent_words(text,k)))
+  fout.close() 
 
-def FrequentWords(Text, k):
-  kmers_count = {}
-  for i in range(0,len(Text)-k):
-    kmer = Text[i:i+k]
-    if kmer in kmers_count:
-      kmers_count[kmer] += 1
-    else:
-      kmers_count[kmer] = 1
+def frequent_words(text, k):
+  frequent_patterns = []
+  count = []
+  for i in range(len(text)-k):
+    pattern = text[i:i+k]
+    count.append(pattern_count(text,pattern))
+  max_count = max(count)
+  for i in range(0,len(text)-k):
+    if count[i] == max_count:
+      frequent_patterns.append(text[i:i+k])
+  frequent_patterns = list(set(frequent_patterns))
+  return frequent_patterns
 
-  max_value = 0
-  for key, value in kmers_count.items():
-    max_value = max(value, max_value)
-
-  max_kmers = []
-  for key, value in kmers_count.items():
-    if value == max_value:
-      max_kmers.append(key)
-
-  return " ".join(max_kmers)
+def pattern_count(text, pattern):
+  count = 0
+  for i in range(len(text)-len(pattern)):
+    if text[i:i+len(pattern)] == pattern:
+      count = count + 1
+  return count  
 
 if __name__ == '__main__':
   prob_2_9()

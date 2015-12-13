@@ -1,17 +1,20 @@
 def prob_2_6():
   lines = open("dataset_2_6.txt").read().splitlines()
 
-  Text = lines[0]
-  Pattern = lines[1]
+  text = lines[0]
+  pattern = lines[1]
 
-  print(PatternCount(Text,Pattern))
+  fout = open("out.txt", "w")
+  print pattern_count(text,pattern)
+  fout.write(str(pattern_count(text,pattern)))
+  fout.close() 
 
-def PatternCount(Text, Pattern):
+def pattern_count(text, pattern):
   count = 0
-  for i in range(0,len(Text)):
-    if Text[i:i+len(Pattern)] == Pattern:
-      count += 1
-  return count
+  for i in range(len(text)-len(pattern)):
+    if text[i:i+len(pattern)] == pattern:
+      count = count + 1
+  return count  
 
 if __name__ == '__main__':
   prob_2_6()

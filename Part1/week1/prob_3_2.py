@@ -1,22 +1,18 @@
 def prob_3_2():
   lines = open("dataset_3_2.txt").read().splitlines()
 
-  fout = open("out.txt", "w")
-  fout.write(ReverseCompliment(lines[0]))
-  fout.close()
+  dna_input = lines[0]
 
-def ReverseCompliment(string_in):
-  string_out = ""
-  compliment = {
-    'A': 'T',
-    'T': 'A',
-    'C': 'G',
-    'G': 'C'
-  }
-  length = len(string_in)
-  for i in range(length):
-    string_out += compliment[string_in[length-i-1]]
-  return string_out
+  fout = open("out.txt", "w")
+  fout.write(reverse_complement_dna(dna_input))
+  fout.close() 
+
+def reverse_complement_dna(pattern):
+  complement_dict = {'A': 'T', 'T': 'A', 'C': 'G', 'G': 'C'}
+  reverse_complement = ""
+  for i in range(len(pattern)):
+    reverse_complement += complement_dict[pattern[len(pattern)-1-i]]
+  return reverse_complement
 
 if __name__ == '__main__':
   prob_3_2()

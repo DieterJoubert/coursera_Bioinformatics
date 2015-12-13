@@ -1,8 +1,8 @@
-def prob_3_5():
-  lines = open("dataset_3_5.txt").read().splitlines()
+def Vibrio_cholerae():
+  lines = open("Vibrio_cholerae.txt").read().splitlines()
 
-  pattern = lines[0]
-  genome = lines[1]
+  pattern = "CTTGATCAT"
+  genome = lines[0]
 
   fout = open("out.txt", "w")
   fout.write(" ".join(map(str,pattern_matching(pattern, genome))))
@@ -16,4 +16,4 @@ def pattern_matching(pattern, genome):
   return indices
 
 if __name__ == '__main__':
-  prob_3_5()
+  Vibrio_cholerae()
