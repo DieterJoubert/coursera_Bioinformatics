@@ -5,7 +5,6 @@ def prob_2_6():
   pattern = lines[1]
 
   fout = open("out.txt", "w")
-  print pattern_count(text,pattern)
   fout.write(str(pattern_count(text,pattern)))
   fout.close() 
 

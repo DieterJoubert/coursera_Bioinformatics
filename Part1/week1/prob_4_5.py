@@ -9,8 +9,10 @@ def prob_4_5():
   L = int(klt[1])
   t = int(klt[2])
 
+  import better_clump_finding as bcf
+
   fout = open("out.txt", "w")
-  fout.write( " ".join(find_clump(genome, k, L, t)) )
+  fout.write(" ".join(bcf.better_clump_finding(genome, k, t, L)))
   fout.close() 
 
 if __name__ == '__main__':
