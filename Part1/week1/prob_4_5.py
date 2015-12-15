@@ -1,6 +1,6 @@
 def prob_4_5():
   """find all k-mers forming (L, t) clumps in genome"""  
-  lines = open("dataset_4_5.txt").read().splitlines()
+  lines = open("data/dataset_4_5.txt").read().splitlines()
 
   genome = lines[0]
 

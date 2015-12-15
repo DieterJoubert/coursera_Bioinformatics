@@ -1,7 +1,7 @@
 from find_skew_diagram import *
 
 def prob_7_6():
-  lines = open("dataset_7_6.txt").read().splitlines()
+  lines = open("data/dataset_7_6.txt").read().splitlines()
   genome = lines[0]
 
   fout = open("out.txt", "w")

@@ -1,5 +1,5 @@
 def Vibrio_cholerae():
-  lines = open("Vibrio_cholerae.txt").read().splitlines()
+  lines = open("data/Vibrio_cholerae.txt").read().splitlines()
 
   pattern = "CTTGATCAT"
   genome = lines[0]

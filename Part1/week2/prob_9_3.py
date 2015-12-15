@@ -1,5 +1,5 @@
 def prob_9_3():
-  lines = open("dataset_9_3.txt").read().splitlines()
+  lines = open("data/dataset_9_3.txt").read().splitlines()
   str_1 = lines[0]
   str_2 = lines[1]
 

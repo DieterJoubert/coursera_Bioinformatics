@@ -1,5 +1,5 @@
 def prob_2_9():
-  lines = open("dataset_2_9.txt").read().splitlines()
+  lines = open("data/dataset_2_9.txt").read().splitlines()
 
   text = lines[0]
   k = int(lines[1])

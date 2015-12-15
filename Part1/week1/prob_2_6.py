@@ -1,5 +1,5 @@
 def prob_2_6():
-  lines = open("dataset_2_6.txt").read().splitlines()
+  lines = open("data/dataset_2_6.txt").read().splitlines()
 
   text = lines[0]
   pattern = lines[1]

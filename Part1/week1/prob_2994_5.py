@@ -1,7 +1,7 @@
 from computing_frequencies import *
 
 def prob_2994_5():
-  lines = open("dataset_2994_5.txt").read().splitlines()
+  lines = open("data/dataset_2994_5.txt").read().splitlines()
 
   text = lines[0]
   k = int(lines[1])

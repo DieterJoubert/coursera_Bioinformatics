@@ -1,5 +1,5 @@
 def prob_3_5():
-  lines = open("dataset_3_5.txt").read().splitlines()
+  lines = open("data/dataset_3_5.txt").read().splitlines()
 
   pattern = lines[0]
   genome = lines[1]

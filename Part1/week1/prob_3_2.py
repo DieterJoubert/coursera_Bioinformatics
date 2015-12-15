@@ -1,5 +1,5 @@
 def prob_3_2():
-  lines = open("dataset_3_2.txt").read().splitlines()
+  lines = open("data/dataset_3_2.txt").read().splitlines()
 
   dna_input = lines[0]
 
