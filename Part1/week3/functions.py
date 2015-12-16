@@ -1,3 +1,28 @@
+def greedy_motif_search(dna, k, t):
+  best_motifs = []
+  for string in dna:
+    best_motifs.append([c for c in string[0:3]])
+  for i in range(len(dna[0])-k+1):
+    motif_1 = dna[0][i:i+k]
+    for i in range(2,t+1):
+
+def profile_most_probable_kmer(text, k, profile):
+  print k
+  char_to_index = {'A': 0, 'C': 1, 'G': 2, 'T': 3}
+  best_kmer = None
+  best_prob = 0
+  for i in range(len(text)-k+1):
+    window = text[i:i+k]
+    prob = float(1)
+    for j in range(len(window)):
+      char = window[j]
+      index = char_to_index[char]
+      prob = prob*profile[index][j]
+    if prob > best_prob:
+      best_prob = prob
+      best_kmer = window
+  return best_kmer
+
 def median_string(dna, k):
   distance = float("inf")
   for i in range(0,4**k):
