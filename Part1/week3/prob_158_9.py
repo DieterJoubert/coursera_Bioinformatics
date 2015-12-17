@@ -1,6 +1,6 @@
 from functions import *
 
-def prob_158_9():
+def main():
   lines = open("data/dataset_158_9.txt").read().splitlines()
   k = int(lines[0])
   dna = []
@@ -14,4 +14,4 @@ def prob_158_9():
   fout.close()  
 
 if __name__ == "__main__":
-  prob_158_9()
+  main()
